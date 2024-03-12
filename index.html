@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Document</title>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+      <style>
+         *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+         }
+         .main{
+            background: rgb(244,124,176);
+            background: radial-gradient(circle, rgba(244,124,176,1) 0%, rgba(165,65,100,1) 100%);
+            height: 100vh;
+            overflow: hidden;
+         }
+         nav{
+            display: flex;
+            padding: 10px 30px;
+            justify-content: space-between;
+            margin-top: 10px;
+
+         }
+         nav h1{
+            font-size: 30px;
+            color: #fff;
+            text-shadow: 5px 5px 2px rgba(0,0,0,0.3);
+         }
+         nav .navlist a{
+            margin: 0 10px;
+            text-decoration: none;
+            color: #fff;
+            font-size: 18px;
+            padding: 10px;
+            border-radius: 10px;
+            font-weight: 700;
+
+         }
+         nav .navlist a:hover{
+            background-color: #fff;
+            color:rgb(244,124,176) ;
+         }
+         .main-body{
+            margin-top: 8%;
+            color: #fff;
+            h1{
+            font-size: 180px;
+            text-align: center;
+           
+         }
+         h4{
+            position: absolute;
+            /* bottom: 340px;
+            left: 330px; */
+            font-size: 28px;
+            letter-spacing: 3px;
+            bottom: 42%;
+            left: 33%;
+            transform: translateX(-50%);
+         }
+         
+      }
+      .img-main{
+            width: 630px;
+            height: 400px;
+            position: absolute;
+            /* top: 200px;
+            left: 580px; */
+            bottom: -1%;
+            left: 63%;
+            transform: translateX(-50%);
+      }
+      
+
+      .login{
+            background-color: #fff;
+            padding:5px 10px;
+            border: none;
+            border-radius: 10px;
+      }
+      .login a{
+            text-decoration: none;
+            color: rgb(244,124,176);
+      }
+      /* footer */
+      .footer{
+            background-color: rgb(37, 36, 36);
+            color: #fff;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 10px;
+      }
+
+      .about-sec{
+         padding: 20px;
+         h2{
+            text-decoration: underline;
+            text-align: center;
+            font-size: 35px;
+            margin-bottom: 20px;
+            margin-top: 40px;
+
+         }
+      }
+      .about{
+         display: flex;
+         flex-wrap: wrap-reverse;
+         padding: 20px;
+      }
+
+      .about-cnt{
+         width: 50%;
+         padding: 30px;
+         line-height: 2rem;
+         text-align: justify;
+        
+      }
+
+      .about-img{
+         width: 50%;
+         .img1{
+            width: 500px;
+            height: 400px;
+         }
+         .img2{
+            position: absolute;
+            width: 250px;
+            height: 250px;
+            bottom: -600px;
+            right: 40px;
+            border: #fff 15px solid;
+         }
+      }
+
+      .tutorials{
+         text-align: center;
+         padding: 20px;
+         background-image:linear-gradient(rgba(244,124,176),rgba(0,0,0,0.9)),url('https://www.parliament.vic.gov.au/49c82f/contentassets/3ba879e450be4dfba6073d486e1f2d86/nationalweekofdeafpeople_parlpresents.jpg');
+         background-attachment: fixed;
+         h2{
+            text-align: center;
+            margin-bottom: 20px;
+            margin-top: 40px;
+            color: #fff;
+            font-size: 35px;
+            text-shadow: 5px 5px 5px rgba(0,0,0,0.9);
+         }
+         .vdo-container{
+            padding: 10px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            gap: 30px;
+         }
+         .tut-btn{
+         display: inline-block;
+         padding: 10px 20px;
+         margin: 20px;
+         background-color: #fff;
+         text-decoration: none;
+         color: #000;
+         font-weight: 800;
+         border-radius: 5px;
+         border: 3px solid #ffffff;
+         outline: #fff 3px solid;
+         
+      }
+   .tut-btn:hover{
+            border: 3px solid #000;
+         }
+      }
+
+     
+      @media screen and (max-width:768px){
+                  .main-body h1{
+                        font-size: 60px;
+                        margin: auto;
+                        margin-top: 10%;
+                  }
+                  .main-body h4{
+            position: absolute;
+            /* bottom: 340px;
+            left: 330px; */
+            font-size: 16px;
+            letter-spacing: 0px;
+            top: 35%;
+            left: 33%;
+         }
+         .main-body img{
+            width: 430px;
+            height: 200px;
+      }
+            }
+     
+      </style>
+</head>
+<body>
+   <div class="main" id="main">
+      <nav>
+         <h1><i class="fa-solid fa-hands"></i>SignLanguage</h1>
+         <div class="navlist">
+               <a href="#main">Home</a>
+               <a href="#about">About</a>
+               <a href="#tutorials">Tutorials</a>
+         </div>
+         <button class="login"><a href="login.html">Login</a></button>
+      </nav> 
+   
+      <div class="main-body">
+         <h1>Language</h1>
+         <h4>That evokes feeling</h4>
+      </div>
+      <img src="Removal-371.png" alt="" class="img-main">
+   </div>
+     
+
+   <section class="about-sec" id="about">
+      <h2>About Us</h2>
+      <div class="about">
+         <div class="about-cnt">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa voluptas dolore vitae accusamus illo! Eum accusantium nisi doloremque animi recusandae necessitatibus maiores dolor, a, aliquid at quam unde provident optio quisquam. Harum animi sed porro, ea odit placeat eum quos cupiditate aspernatur. Vel laboriosam molestiae ut ullam, minima, architecto quo placeat magnam quos dolorum ratione. Ipsum doloremque quibusdam quidem odio!</p>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Necessitatibus fugiat, ea debitis culpa at cupiditate quod dolor optio aspernatur! Suscipit quibusdam, ratione quia tenetur nam provident odit a repudiandae cum. Eum doloribus alias labore dolor. Accusamus exercitationem quo deleniti. Nam.</p>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Temporibus aut vitae eum nemo, rem inventore ex repellat corporis incidunt voluptas id minima, commodi obcaecati omnis rerum.</p>
+         </div>
+         <div class="about-img">
+          <img src="https://www.johnacademy.co.uk/wp-content/uploads/2017/11/Sign-Language.jpg" class="img1" alt="">
+          <img src="https://cademy-images.b-cdn.net/2081c503-ef48-4edd-af60-c5c576121412/1f6499b1-e783-4cd4-ae7a-f792f0f3c715/original.jpeg?width=3840" class="img2" alt="">
+         </div>
+    </div>
+   
+   </section>
+  
+ <div class="tutorials" id="tutorials">
+   <h2>Tutorials</h2>
+   <div class="vdo-container">
+      <iframe width="360" height="315" src="https://www.youtube.com/embed/p0ufyoe0URA?si=qh-FarnjijgzcRGU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      <iframe width="360" height="315" src="https://www.youtube.com/embed/v1desDduz5M?si=38UxY8j3xyYcb7pZ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      <iframe width="360" height="315" src="https://www.youtube.com/embed/nzrbvMeoBnE?si=gEAIQqy1xeKJ5GZ-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      <iframe width="360" height="315" src="https://www.youtube.com/embed/Raa0vBXA8OQ?si=rtSG3xDUoccbU0a7" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      <iframe width="360" height="315" src="https://www.youtube.com/embed/0FcwzMq4iWg?si=0B7ZWKgTVwfbdplB" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      <iframe width="360" height="315" src="https://www.youtube.com/embed/YuX7-UvZy-8?si=sTRtzajPWff67ON8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+   </div>
+   <a href="" class="tut-btn">Learn More</a>
+ </div>
+
+      <!-- footer -->   
+  <footer>
+    <div class="footer">
+      <p>&copy; 2024 Your Company Name. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+    </div>
+  </footer>
+  <script>
+   document.addEventListener("DOMContentLoaded", function () {
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
+});
+  </script>
+</body>
+</html>

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registration Page</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+       .upload-btn-wrapper {
+      position: relative;
+      overflow: hidden;
+      text-align: center;
+    }
+
+    .btn {
+      border: 2px solid gray;
+      color: gray;
+      background-color: white;
+      padding: 8px 20px;
+      border-radius: 8px;
+      font-size: 14px;
+      font-weight: bold;
+    }
+
+    .upload-btn-wrapper input[type=file] {
+      font-size: 100px;
+      position: absolute;
+      left: 0;
+      top: 0;
+      opacity: 0;
+    }
+
+    .back-btn {
+      position: fixed;
+      top: 15px;
+      left: 15px;
+      background-color: #000000;
+      color: #fff;
+      padding: 10px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    .back-btn span{
+      font-weight: bolder;
+      padding-right: 5px;
+      font-size: 20px;
+
+    }
+  </style>
+  </style>
+</head>
+<body>
+      <button class="back-btn" onclick="goBack()"> <span>&#8617;</span>Back</button>
+<div class="reg">
+      <div class="container">
+    
+          <div class="tgl">
+            <label class="switch" >
+                  <input type="checkbox" class="toggle-btn" onclick="toggleForms()">
+                  <span class="slider"></span>
+            </label>
+          </div>
+      
+          <!-- candidate form -->
+          <form class="candidate-form active-form" id="candidateForm">
+            <h2>Candidate Registration</h2>
+
+            <div class="upload-btn-wrapper">
+              <button class="btn" id="fileLabel">Choose Image</button>
+              <input type="file" name="candidate-image" id="image" class="inputfields" accept="image/*" onchange="updateFileName()">
+            </div>
+            <br>
+ 
+                  <label for="">Name:</label>
+                  <input type="text" class="inputfields">
+
+                  <label for="">Email:</label>
+                  <input type="text" class="inputfields">
+                  
+                  <label for="candidateContact">Contact Number:</label>
+                  <input class="inputfields" type="text" id="candidateContact" name="candidateContact" maxlength="10" pattern="[0-9]+" title="Please enter only numbers" oninput="this.value = this.value.replace(/[^0-9]/g, '');">
+              
+                  <label for="">Place:</label>
+                  <input type="text" class="inputfields">
+
+                  <label for="candidatepincode">Pincode:</label>
+                  <input class="inputfields" type="text" id="candidatepincode" name="candidatepincode" maxlength="6" pattern="[0-9]+" title="Please enter only numbers" oninput="this.value = this.value.replace(/[^0-9]/g, '');">
+              
+
+                  <label for="">Qualification:</label>
+                  <input type="text" class="inputfields">
+
+                  <label for="">Experience:</label>
+                  <input type="text" class="inputfields">
+
+
+                  <label for="">Disability (in %):</label>
+                  <input class="inputfields" type="number" id="disability" name="disability" min="0" max="100">
+
+
+                  <label for="candidatePassword">Password (minimum 4 digits):</label>
+                  <input class="inputfields" type="password" id="candidatePassword" name="candidatePassword" pattern="\d{4,}" title="Please enter a password with at least 4 digits" required>
+
+                  <label for="confirmCandidatePassword">Confirm Password:</label>
+                  <input class="inputfields" type="password" id="confirmCandidatePassword" name="confirmCandidatePassword"  required>
+                 <br><span id="passwordError" class="error-message"></span><br>
+
+                 <label for="image">Upload CV:</label>
+                 <input type="file" name="" id="" class="inputfields">
+
+                 <input type="submit" class="submit" value="SignUp">
+
+           </form>
+      
+
+          <!-- interviewer-form -->
+          <form action="#" class="interviewer-form" id="interviewerForm" onsubmit="return validatePassword()">
+              <h2>Interviewer Registration</h2>
+            
+               <label for="companyname">Company Name:</label>
+               <input class="inputfields" type="text" id="interviewerName" name="interviewerName" required>
+      
+              <label for="field">field:</label>
+              <input class="inputfields" type="text" required>
+
+              <label for="location">Location:</label>
+              <input class="inputfields" type="text">
+
+              <label for="">Email:</label>
+              <input class="inputfields" type="email" name="" id="">
+
+              <label for="candidateContact">Contact Number:</label>
+              <input class="inputfields" type="text" id="candidateContact" name="candidateContact" maxlength="10" pattern="[0-9]+" title="Please enter only numbers" oninput="this.value = this.value.replace(/[^0-9]/g, '');">
+          
+              <label for="">Description:</label>
+              <textarea name="" id="" cols="30" rows="5" class="inputfields"></textarea>
+
+              <label for="candidateUsername">Username:</label>
+              <input class="inputfields" type="text" id="candidateUsername" name="candidateUsername" required>
+    
+              <label for="candidatePassword">Password (minimum 4 digits):</label>
+              <input class="inputfields" type="password" id="candidatePassword" name="candidatePassword" pattern="\d{4,}" title="Please enter a password with at least 4 digits" required>
+
+              <label for="confirmCandidatePassword">Confirm Password:</label>
+              <input class="inputfields" type="password" id="confirmCandidatePassword" name="confirmCandidatePassword"  required>
+              <br><span id="passwordError" class="error-message"></span><br>
+
+              <input type="submit" class="submit" value="SignUp">
+           </form>
+      </div>
+      
+</div>
+  <script src="script.js"></script>
+</body>
+</html>
